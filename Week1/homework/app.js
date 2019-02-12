@@ -108,7 +108,7 @@
         let title = "Title: " + ourBookTitles[key].title;
         let language = "LANGUAGE: " + ourBookTitles[key].language;
         let author = "AUTHOR: " + ourBookTitles[key].author;
-        str += '<h3>' + title + '</h3>' + '<li>' + language + '</li>' + '<li>' + author + '</li>' + '<div id=' + key + '>' + ' ' + '</div>';
+        str += '<div>' + '<h3>' + title + '</h3>' + '<li>' + language + '</li>' + '<li>' + author + '</li>' + '<div id=' + key + '>' + ' ' + '</div>' + '</div>';
     });
 
     str += '</ul>';
@@ -130,6 +130,7 @@
         }
 
     }
+
 
 
 
@@ -241,5 +242,4 @@
     str += '</ul>';
 
     document.getElementById("bookContainer").innerHTML = str;*/
-
 }

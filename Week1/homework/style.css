@@ -1,40 +1,92 @@
-/* add your styling here */
-
 body {
-    display: grid;
-    justify-items: center;
+    font-family: 'PT Sans Caption', "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+    font-size: 3vh;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+}
+
+#logo {
+    text-decoration: none;
+    color: white;
+    font-size: 5vh;
+    font-weight: bold;
+}
+
+#menu-icon {
+    font-family: Geneva, sans-serif;
+    font-size: 6vh;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 1em;
+    box-sizing: border-box;
+    color: white;
+    background: url('images/header.jpeg') center center no-repeat;
+    background-size: cover;
+}
+
+.hero-title {
+    max-width: 16em;
+    margin: 0;
+    font-size: 12vh;
+    font-weight: bold;
+    line-height: 7;
+}
+
+.hero-footer {
+    display: flex;
+    margin-bottom: 1em;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+}
+
+*,
+*:before,
+*:after {}
+
+.container {
     background-image: url('images/book.jpg');
 }
 
-.container {
-    border-radius: 10px;
-    padding: 1em;
-    vertical-align: middle;
-}
-
-h1 {
-    font-family: sans-serif;
-    font-size: 24px;
-    color: rgb(8, 7, 7);
-    padding: 1px;
-    margin: 1px;
-    padding-top: 30px;
-    text-align: center;
+.booksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 h3 {
-    font-family: sans-serif;
-    font-size: 18px;
+    font-family: cursive;
+    font-size: 50px;
     color: rgb(8, 7, 7);
     padding: 1px;
     margin: 1px;
     padding-top: 100px;
+    width: 60%;
 }
 
 ul {
     padding: 0;
-    margin: 40px;
+    margin-left: 100px;
+    width: 100%;
 }
 
 li {
@@ -43,10 +95,45 @@ li {
     padding: 5px;
     margin: 10px;
     border-radius: 5px;
+    width: 100%;
 }
 
 img {
-    width: 20%;
     height: auto;
-    text-align: center;
+    text-align: right;
+    margin-left: 0 auto;
+    width: 20%;
+}
+
+@media screen and (max-width: 480px) {
+    .hero-title {
+        font-size: 4vh;
+    }
+    img {
+        width: 70%;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    ul {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .hero-title {
+        font-size: 7vh;
+    }
+    img {
+        width: 30%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .hero-title {
+        font-size: 10vh;
+    }
+    img {
+        width: 20%;
+    }
 }
